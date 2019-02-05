@@ -13,13 +13,22 @@ module.exports = class GeneratorStarterApp extends Generator {
       this.destinationPath('package.json'),
       this.fs.readJSON(this.templatePath('_package.json')),
     );
+  }
 
+  conflicts() {
     this.fs.copyTpl(
       this.templatePath('static/**/*'),
       this.destinationPath(),
       this.config.getAll(),
       undefined,
       { globOptions: { dot: true } },
+    );
+
+    const tagName = this.config.get('tagName');
+    this.fs.copyTpl(
+      this.templatePath('static/test/<%= tagName %>.test.js'),
+      this.destinationPath(`test/${tagName}.test.js`),
+      this.config.getAll(),
     );
   }
 };

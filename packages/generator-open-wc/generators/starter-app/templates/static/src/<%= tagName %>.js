@@ -12,7 +12,7 @@ class OpenWcApp extends LitElement {
     super();
     this.title = 'open-wc';
   }
- 
+
   static get styles() {
     return [
       css`
@@ -72,10 +72,11 @@ class OpenWcApp extends LitElement {
         </a>
       </header>
       <p class="app-footer">
-        🚽 Made with love by <a target="_blank" rel="noopener noreferrer" href="https://github.com/open-wc">open-wc</a>.
+        🚽 Made with love by
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/open-wc">open-wc</a>.
       </p>
     `;
   }
 }
 
-customElements.define('open-wc-app', OpenWcApp);
+customElements.define('asd-asd', OpenWcApp);

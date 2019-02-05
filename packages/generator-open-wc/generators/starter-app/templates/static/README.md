@@ -14,11 +14,10 @@
 To get started:
 
 ```sh
-git clone 
-cd open-wc-starter-app
+yo open-wc:starter-app
 
 npm install
-npm start
+npm run start:dev
 ```
 
 <p align="center">
@@ -32,4 +31,4 @@ npm start
 - `build` builds your app for production and outputs it in the /dist folder
 - `start:build` runs your built app using a plain web server, to prove it works without magic 😃
 - `build:stats` creates an analysis report of your app bundle to be consumed by Webpack Visualizer and Analyser
-- `test` runs your test suite
+- `test` runs your test suite with Karma
