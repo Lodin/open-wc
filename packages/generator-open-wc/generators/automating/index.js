@@ -1,7 +1,7 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class GeneratorAutomating extends Generator {
-  default() {
+  initializing() {
     this.composeWith(require.resolve('../automating-circleci'), this.config.getAll());
   }
 };

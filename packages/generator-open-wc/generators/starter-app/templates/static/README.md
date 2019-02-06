@@ -27,8 +27,9 @@ npm start
 
 ## Scripts
 
-- `start` runs your app with auto reload for development, it only works on browsers which support modules for faster builds
-- `start:es5` runs your app for development, it only works on browsers that don't support modules (IE11)
+- `start` runs your app, with a minimal express server directly from source (only works in modern browsers)
+- `start:dev` runs your app with auto reload for development, it only works on browsers which support modules for faster builds
+- `start:dev:es5` runs your app for development, it only works on browsers that don't support modules (IE11)
 - `build` builds your app for production and outputs it in the /dist folder
 - `start:build` runs your built app using a plain web server, to prove it works without magic 😃
 - `build:stats` creates an analysis report of your app bundle to be consumed by Webpack Visualizer and Analyser

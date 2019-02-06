@@ -1,9 +1,13 @@
 {
-  "devDependencies": {
-    "eslint-plugin-lit": "^0.5.0"
+  "scripts": {
+    "start": "owc-dev-server --open"
   },
   "dependencies": {
     "lit-html": "^1.0.0-rc.2",
     "lit-element": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "owc-dev-server": "^0.1.2",
+    "eslint-plugin-lit": "^0.5.0"
   }
 }

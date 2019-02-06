@@ -7,9 +7,10 @@ module.exports = class GeneratorPublishStorybook extends Generator {
         __store: this.config,
       });
     }
+    this.composeWith(require.resolve('../demoing'), this.config.getAll());
   }
 
-  writing() {
+  default() {
     // write everything else
     this.fs.copyTpl(
       this.templatePath('static/**/*'),
@@ -18,9 +19,5 @@ module.exports = class GeneratorPublishStorybook extends Generator {
       undefined,
       { globOptions: { dot: true } },
     );
-  }
-
-  default() {
-    this.composeWith(require.resolve('../demoing'), this.config.getAll());
   }
 };
