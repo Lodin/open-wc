@@ -72,7 +72,8 @@ class <%= className %> extends LitElement {
         </a>
       </header>
       <p class="app-footer">
-        🚽 Made with love by <a target="_blank" rel="noopener noreferrer" href="https://github.com/open-wc">open-wc</a>.
+        🚽 Made with love by
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/open-wc">open-wc</a>.
       </p>
     `;
   }

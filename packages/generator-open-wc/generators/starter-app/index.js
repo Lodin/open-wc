@@ -2,9 +2,15 @@ const Generator = require('yeoman-generator');
 
 module.exports = class GeneratorStarterApp extends Generator {
   initializing() {
+    if (Object.keys(this.config.getAll()).length === 0) {
+      this.composeWith(require.resolve('../get-tag-name'), {
+        __store: this.config,
+      });
+    }
+
     this.composeWith(require.resolve('../building-webpack'), this.config.getAll());
     this.composeWith(require.resolve('../linting'), this.config.getAll());
-    this.composeWith(require.resolve('../scaffold-testing'), this.config.getAll());
+    this.composeWith(require.resolve('../testing'), this.config.getAll());
   }
 
   writing() {
@@ -16,10 +22,17 @@ module.exports = class GeneratorStarterApp extends Generator {
       this.fs.readJSON(this.templatePath('_package.json')),
     );
 
-    // write & rename element app-template
+    // write & rename app-template
     this.fs.copyTpl(
-      this.templatePath('app-template.js'),
+      this.templatePath('_app.js'),
       this.destinationPath(`src/${tagName}.js`),
+      this.config.getAll(),
+    );
+
+    // write & rename test-template
+    this.fs.copyTpl(
+      this.templatePath('_test.js'),
+      this.destinationPath(`test/${tagName}.test.js`),
       this.config.getAll(),
     );
 
