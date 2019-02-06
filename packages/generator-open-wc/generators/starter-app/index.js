@@ -50,7 +50,7 @@ module.exports = class GeneratorStarterApp extends Generator {
 
   end() {
     console.log('');
-    console.log('It is all down now :)');
+    console.log('Youre all set up now!');
     console.log('');
     console.log('All you need to do is run:');
     console.log('  yarn install (or npm install)');

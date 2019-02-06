@@ -4,20 +4,20 @@ const Generator = require('yeoman-generator');
 const inquirer = require('inquirer');
 
 const choices = {
-  appStarter: 'Create Open Webcomponents Starter App',
+  appStarter: 'Create Open Web Components Starter App',
   appProduction:
-    'Create Open Webcomponents Production Ready App Setup (if you feel lost use the Starter App first)',
+    'Create Open Web Components Enterprise App Setup (if you feel lost use the Starter App first)',
   separator1: new inquirer.Separator(),
-  wcVanilla: 'Create a vanilla webcomponent following the Open Webcomponents recommendations',
-  wcUpgrade: 'Upgrade my existing webcomponent to use the Open Webcomponents recommendations',
+  wcVanilla: 'Create a vanilla web component following the Open Web Components recommendations',
+  wcUpgrade: 'Upgrade my existing web component to use the Open Web Components recommendations',
   separator2: new inquirer.Separator(),
-  nothing: 'Nah, I am fine thx => exit',
+  nothing: 'Nah, I am fine thanks! => exit',
 };
 
 module.exports = class GeneratorApp extends Generator {
   async prompting() {
     console.log('');
-    console.log('Welcome to Open Webcomponents:');
+    console.log('Welcome to Open Web Components:');
     console.log('');
 
     this.answers = await this.prompt([
@@ -48,7 +48,7 @@ module.exports = class GeneratorApp extends Generator {
         console.log('Ok, bye - see ya next time');
         break;
       default:
-        console.log('You should have mad a decision');
+        console.log('You didn't make a choice!');
     }
   }
 };
