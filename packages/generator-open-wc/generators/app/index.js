@@ -48,7 +48,7 @@ module.exports = class GeneratorApp extends Generator {
         console.log('Ok, bye - see ya next time');
         break;
       default:
-        console.log('You didn't make a choice!');
+        console.log('You didnt make a choice!');
     }
   }
 };
