@@ -6,7 +6,7 @@
     "build": "webpack --mode production",
     "build:stats": "webpack --mode production --profile --json > bundle-stats.json"
   },
-  "dependencies": {
+  "devDependencies": {
     "@open-wc/building-webpack": "^0.1.3"
   },
   "devDependencies": {
