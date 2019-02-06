@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this, no-console */
+
 const Generator = require('yeoman-generator');
 
 module.exports = class GeneratorStarterApp extends Generator {
@@ -44,5 +46,15 @@ module.exports = class GeneratorStarterApp extends Generator {
       undefined,
       { globOptions: { dot: true } },
     );
+  }
+
+  end() {
+    console.log('');
+    console.log('It is all down now :)');
+    console.log('');
+    console.log('All you need to do is run:');
+    console.log('  yarn install (or npm install)');
+    console.log('  yarn start (or npm start)');
+    console.log('');
   }
 };
