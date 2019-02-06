@@ -33,6 +33,22 @@ yo open-wc:scaffold-vanilla
 # this will scaffold a new web component + run all available scaffold generators
 ```
 
+### Available application generators:
+
+- `yo open-wc:starter-app`<br/> 
+  This generator scaffolds a new starter application. We recommend using this generator at the start of your web component project. 
+  <details>
+    <summary>More info</summary>
+    <br/>
+    This generator will internally run:
+
+      - open-wc:bundling-webpack
+      - open-wc:testing
+      - open-wc:linting
+      - A frontend setup
+  </details>
+  <br/>
+
 ### Available scaffold generators:
 
 - `yo open-wc:scaffold-vanilla`<br/> 

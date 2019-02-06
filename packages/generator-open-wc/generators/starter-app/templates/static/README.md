@@ -33,3 +33,4 @@ npm run start:dev
 - `start:build` runs your built app using a plain web server, to prove it works without magic 😃
 - `build:stats` creates an analysis report of your app bundle to be consumed by Webpack Visualizer and Analyser
 - `test` runs your test suite with Karma
+- `lint` runs the linter for your project
